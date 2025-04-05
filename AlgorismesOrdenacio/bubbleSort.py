@@ -8,6 +8,9 @@ class BubbleSort:
         n = len(llista)
 
         for i in range(n-1):
+            print("Iteració: " + str(i))
+            print(llista)
+
             swapped = False
             for j in range(n-i-1):
                 if llista[j] > llista[j+1]:

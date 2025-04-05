@@ -6,12 +6,11 @@ def main():
     llista = serie.generarLlista()                                      # Generem objecte llista
 
     print("La seria dodecafonica aleatoria és: ")
-    print(llista)
+    print(str(llista)+"\n")
 
     bubble = BubbleSort()
-    print("Llista ordenada: ")
+    print("Llista ordenada: \n")
     llista_ord = bubble.bubble_sort(llista)
-    print(llista_ord)
 
 
 if __name__ == "__main__":
