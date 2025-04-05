@@ -1,5 +1,0 @@
-'''
-BUBBLE SORT
-COMPLEXITAT: O(n²)
-'''
-
