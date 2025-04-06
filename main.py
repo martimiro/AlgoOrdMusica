@@ -1,4 +1,4 @@
-from AlgoOrdMusica.menu import Menu
+from AlgoOrdMusica.Vista.menu import Menu
 
 def main():
     menu = Menu()
