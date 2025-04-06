@@ -1,5 +1,5 @@
-from AlgoOrdMusica.serie import Serie
-from AlgoOrdMusica.AlgorismesOrdenacio.bubbleSort import BubbleSort
+from AlgoOrdMusica.Vista.serie import Serie
+from AlgoOrdMusica.Model.bubbleSort import BubbleSort
 
 class Menu:
     def menu(self):
