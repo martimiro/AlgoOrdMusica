@@ -1,6 +1,6 @@
 # Algorismes d'ordenació aplicats a la música
 
-## **Apunts teorics**
+## **Apunts teòrics**
 
 ### Bubble Sort
 #### *Complexitat: O(n²)*
