@@ -1,7 +1,12 @@
 from AlgoOrdMusica.Model.node import Node
 
+'''
+BUBBLE SORT
+COMPLEXITAT: O(n²)
+'''
 
-def inorder(root, res):
+class BinaryTreeSort:
+    def inorder(root, res):
     # Recursive travesal 
     if root:
         inorder(root.left,res)
