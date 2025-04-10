@@ -1,5 +1,3 @@
-from AlgoOrdMusica.Model.node import Node
-
 '''
 BUBBLE SORT
 COMPLEXITAT: O(n²) no balancejat || O(n) balancejat
@@ -10,6 +8,7 @@ class SortTree:
     self.left = None
     self.value = value
     self.right = None
+
   def insert_val(self, _value):
     if _value < self.value:
        if self.left is None:
