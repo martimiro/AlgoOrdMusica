@@ -13,14 +13,14 @@ class BinaryTreeSort:
         res.append(root.val)
         inorder(root.right,res)
 
-def treesort(arr):
-    # Build BST
-    if len(arr) == 0:
-        return arr
-    root = node(arr[0])
-    for i in range(1,len(arr)):
-        root.insert(arr[i])
-    # Traverse BST in order. 
-    res = []
-    inorder(root,res)
-    return res
+    def treesort(arr):
+        # Build BST
+        if len(arr) == 0:
+            return arr
+        root = node(arr[0])
+        for i in range(1,len(arr)):
+            root.insert(arr[i])
+        # Traverse BST in order. 
+        res = []
+        inorder(root,res)
+        return res
