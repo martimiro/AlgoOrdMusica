@@ -20,3 +20,7 @@ class SortTree:
           self.right = SortTree(_value)
        else:
           self.right.insert_val(_value)
+
+tree = SortTree(4)
+for i in [5, 3, 1, 2, 8, 7, 4]:
+  tree.insert_val(i)
