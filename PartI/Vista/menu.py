@@ -1,6 +1,6 @@
 from Vista.serie import Serie
 from Model.bubbleSort import BubbleSort
-from Model.binaryTreeSort import SortTree
+from Model.bucketSort import BucketSort
 
 
 """
@@ -48,7 +48,7 @@ class Menu:
                         try:                       
                             print("============ MENÚ ==============")
                             print("[1] Bubble Sort.")
-                            print("[2] Binary Tree Sort.")
+                            print("[2] Bucket Sort.")
                             print("================================")
 
                             entrada = input("Escull una opció: ")
@@ -59,10 +59,12 @@ class Menu:
                                 bubble = BubbleSort()
                                 print("\nLlista ordenada: ")
                                 bubble.bubble_sort(llista)
+                                return
                             elif(entrada == 2):
-                                bts = SortTree()
+                                bucket = BucketSort()
                                 print("\nLlista ordenada: ")
-                                bts.display()
+                                bucket.bucket_sort(llista)
+                                return
                             # Cas entrada incorrecta
                             else:
                                 print("ERROR: L'entrada no és correcta.")
