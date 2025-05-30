@@ -1,5 +1,11 @@
-from AlgoOrdMusica.Vista.serie import Serie
-from AlgoOrdMusica.Model.bubbleSort import BubbleSort
+from Vista.serie import Serie
+from Model.bubbleSort import BubbleSort
+from Model.binaryTreeSort import SortTree
+
+
+"""
+FER MENU.MOSTRAROPCIONS
+"""
 
 class Menu:
     def menu(self):
@@ -42,19 +48,24 @@ class Menu:
                         try:                       
                             print("============ MENÚ ==============")
                             print("[1] Bubble Sort.")
+                            print("[2] Binary Tree Sort.")
                             print("================================")
 
                             entrada = input("Escull una opció: ")
                             entrada = int(entrada)
 
-                            # Cas entrada incorrecta
-                            if(entrada != 1):
-                                print("ERROR: L'entrada no és correcta.")
                             # Cas entrada = 1 (bubbleSort)
-                            elif(entrada == 1):
+                            if(entrada == 1):
                                 bubble = BubbleSort()
                                 print("\nLlista ordenada: ")
                                 bubble.bubble_sort(llista)
+                            elif(entrada == 2):
+                                bts = SortTree()
+                                print("\nLlista ordenada: ")
+                                bts.display()
+                            # Cas entrada incorrecta
+                            else:
+                                print("ERROR: L'entrada no és correcta.")
 
                         except ValueError:
                             print("ERROR: L'entrada no és correcta.")
