@@ -1,17 +1,13 @@
 from Vista.serie import Serie
 from Model.bubbleSort import BubbleSort
 from Model.bucketSort import BucketSort
-
-
-"""
-FER MENU.MOSTRAROPCIONS
-"""
+from Model.insertionSort import InsertionSort
+from Model.mergeSort import MergeSort
 
 class Menu:
     def menu(self):
         entrada = 0
 
-        
         while(entrada == 0 or entrada > 3 or entrada < 0):
             try:
                 print("============ MENÚ ==============")
@@ -23,23 +19,17 @@ class Menu:
                 entrada = input("Escull una opció: ")
                 entrada = int(entrada)
 
-                # Cas entrada incorrecta
                 if(entrada != 1 and entrada != 2 and entrada != 3):
                     print("ERROR: L'entrada no és correcta.")
-                # Cas entrada = 1 (inserir la propia serie)
                 elif(entrada == 1):
                     print("En construcció")
-                # Cas entrada = 3 (sortir)
                 elif(entrada == 3):
                     print("Gràcies, fins la propera!")
                     return 
-                # Cas entrada = 2 (generar aleatori)
                 else:
                     entrada = 0
-                    # Creem objecte llista
                     serie = Serie()
 
-                    # Generem objecte llista                                        
                     llista = serie.generarLlista()
                     print("\nLa seria dodecafonica aleatoria és: ")
                     print(str(llista)+"\n")
@@ -49,12 +39,14 @@ class Menu:
                             print("============ MENÚ ==============")
                             print("[1] Bubble Sort.")
                             print("[2] Bucket Sort.")
+                            print("[3] Insertion Sort.")
+                            print("[4] Merge Sort.")
+                            print("[5] Sortir.")
                             print("================================")
 
                             entrada = input("Escull una opció: ")
                             entrada = int(entrada)
 
-                            # Cas entrada = 1 (bubbleSort)
                             if(entrada == 1):
                                 bubble = BubbleSort()
                                 print("\nLlista ordenada: ")
@@ -65,7 +57,17 @@ class Menu:
                                 print("\nLlista ordenada: ")
                                 bucket.bucket_sort(llista)
                                 return
-                            # Cas entrada incorrecta
+                            elif(entrada == 3):
+                                inserction = InsertionSort()
+                                print("\nLlista ordenada: ")
+                                inserction.insertion_sort(llista)
+                            elif(entrada == 4):
+                                merge = MergeSort()
+                                print("\nLlista ordenada: ")
+                                merge.merge_sort(llista, 0, len(llista) - 1)
+                            elif(entrada == 5):
+                                print("Gràcies, fins la propesra!")
+                                return 
                             else:
                                 print("ERROR: L'entrada no és correcta.")
 
