@@ -1,4 +1,4 @@
-from Vista.menu import Menu
+from View.menu import Menu
 
 def main():
     menu = Menu()

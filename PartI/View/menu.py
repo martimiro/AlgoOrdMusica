@@ -1,4 +1,4 @@
-from Vista.serie import Serie
+from Controller.serie import Serie
 from Model.bubbleSort import BubbleSort
 from Model.bucketSort import BucketSort
 from Model.insertionSort import InsertionSort
