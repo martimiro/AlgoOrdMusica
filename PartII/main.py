@@ -26,8 +26,6 @@ line, = ax.plot([], [], color='red', linewidth=3)
 
 coords = [pos[node] for node in path]
 
-# Crear un text fora dels límits del graf, dins la finestra
-# Usa coordenades de figura (no d'eixos), de 0 a 1
 fig_text = fig.text(0.5, 0.03, "", ha='center', fontsize=12)
 
 def init():
